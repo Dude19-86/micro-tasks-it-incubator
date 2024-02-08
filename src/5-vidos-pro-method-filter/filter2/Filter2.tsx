@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {FilterButton2} from "./FilterButton2";
+import {v1} from "uuid";
 
 export type FilteredValueType = "All" | "Dollars" | "RUB"
 
@@ -35,9 +36,19 @@ export const Filter2 = () => {
         filterMoney = money.filter((e, i) => i !== id)
         setMoney(filterMoney)
     }
+
+    const addMoney = (banknotes: string, value: number, number: string) => {
+        let newMoneyObject = {id: v1(), banknotes: banknotes, value: value, number: number}
+        let newMoney = [newMoneyObject, ...money]
+        setMoney(newMoney)
+    }
     return (
         <div>
-            <FilterButton2 money={filterMoney} onclickFilteredHandler={filteredHandler} removeHandler={removeHandler}/>
+            <FilterButton2 money={filterMoney}
+                           onclickFilteredHandler={filteredHandler}
+                           removeHandler={removeHandler}
+                           addMoneyHandler={addMoney}/>
+
         </div>
     );
 };

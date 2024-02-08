@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Filter2} from "./5-vidos-pro-method-filter/filter2/Filter2";
+import {NewComponent2} from "./6-input/NewComponent2";
 // import {Header} from "./1-vidos-pro-vlogennie-componenti/site/Header";
 // import {Body} from "./1-vidos-pro-vlogennie-componenti/site/Body";
 // import {Footer} from "./1-vidos-pro-vlogennie-componenti/site/Footer";
@@ -29,7 +30,8 @@ const App = () => {
             {/*<Footer titleForFooter={"NEW FOOTER"}/>*/}
             {/*<NewComponent students={students}/>*/}
             {/*<Filter/>*/}
-            <Filter2/>
+            {/*<Filter2/>*/}
+            <NewComponent2/>
         </div>
     );
 }
