@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {Input} from "./Input";
 import {Button2} from "./Button2";
-import {Simulate} from "react-dom/test-utils";
-import keyDown = Simulate.keyDown;
 
 export const NewComponent2 = () => {
 
